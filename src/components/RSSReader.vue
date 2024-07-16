@@ -1,5 +1,7 @@
 <script setup></script>
 
-<template></template>
+<template>
+  <div class="main-container"></div>
+</template>
 
 <style scoped></style>

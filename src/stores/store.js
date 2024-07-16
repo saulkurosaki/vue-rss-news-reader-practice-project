@@ -2,8 +2,8 @@ import { defineStore } from "pinia";
 import { reactive } from "vue";
 
 export const useFeedStore = defineStore("feedStore", () => {
-  // Estados (información de los RSS)
-  const source = reactive([
+  // States (información de los RSS)
+  const sources = reactive([
     {
       id: crypto.randomUUID(),
       name: "Mozilla Hacks",
@@ -21,5 +21,5 @@ export const useFeedStore = defineStore("feedStore", () => {
 
   async function registerNewSource(url) {}
 
-  return { source, current };
+  return { sources, current };
 });

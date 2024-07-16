@@ -10,6 +10,7 @@ export const useFeedStore = defineStore("feedStore", () => {
       url: "https://hacks.mozilla.org/feed",
     },
   ]);
+
   const current = reactive({
     source: null,
     items: null,
@@ -18,7 +19,7 @@ export const useFeedStore = defineStore("feedStore", () => {
   // Actions
   async function loadSource(source) {}
 
-  //   async function registerNewSource(url) {}
+  async function registerNewSource(url) {}
 
   return { source, current };
 });

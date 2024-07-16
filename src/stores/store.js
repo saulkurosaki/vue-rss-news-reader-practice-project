@@ -17,9 +17,32 @@ export const useFeedStore = defineStore("feedStore", () => {
   });
 
   // Actions
-  async function loadSource(source) {}
+  async function loadSource(source) {
+    const response = await fetch(source.url);
+    let text = await response.text();
+    text = text.replace(/content:encoded/g, "content");
+
+    const domParser = new DOMParser();
+    const doc = domParser.parseFromString(text, "text/xml");
+
+    console.log(doc);
+
+    let posts = [];
+
+    doc.querySelectorAll("item, entry").forEach((item) => {
+      const post = {
+        title: item.querySelector("title").textContent ?? "Sin Titulo",
+        content: item.querySelector("content").textContent ?? "",
+      };
+
+      posts.push(post);
+    });
+
+    current.items = [...posts];
+    current.source = source;
+  }
 
   async function registerNewSource(url) {}
 
-  return { sources, current };
+  return { sources, current, loadSource, registerNewSource };
 });

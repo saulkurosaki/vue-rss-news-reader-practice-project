@@ -10,11 +10,10 @@ export const useFeedStore = defineStore("feedStore", () => {
       url: "https://hacks.mozilla.org/feed",
     },
   ]);
-
-  //   const current = reactive({
-  //     source: null,
-  //     items: null,
-  //   });
+  const current = reactive({
+    source: null,
+    items: null,
+  });
 
   // Actions
   //   async function loadSource(source) {}

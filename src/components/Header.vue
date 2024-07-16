@@ -1,5 +1,24 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+import { useFeedStore } from "@/stores/store";
 
-<template></template>
+const url = ref("");
+const feedStore = useFeedStore();
+
+const handleSubmit = () => {
+  if (!!url.value) {
+    feedStore.registerNewSource(url.value);
+  }
+};
+</script>
+
+<template>
+  <div class="header">
+    <form action="" @submit.prevent="handleSubmit">
+      <input type="url" required v-model="url" />
+      <button type="submit">Add Source</button>
+    </form>
+  </div>
+</template>
 
 <style scoped></style>

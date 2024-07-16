@@ -16,7 +16,7 @@ export const useFeedStore = defineStore("feedStore", () => {
   });
 
   // Actions
-  //   async function loadSource(source) {}
+  async function loadSource(source) {}
 
   //   async function registerNewSource(url) {}
 

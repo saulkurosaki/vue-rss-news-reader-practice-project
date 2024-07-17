@@ -21,4 +21,13 @@ const handleSubmit = () => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.header {
+  background: black;
+  grid-area: header;
+  justify-self: stretch;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+</style>

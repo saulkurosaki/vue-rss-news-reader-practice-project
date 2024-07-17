@@ -44,10 +44,10 @@ export const useFeedStore = defineStore("feedStore", () => {
 
   async function registerNewSource(url) {
     try {
-      const response = await fetch();
+      const response = await fetch(url);
       let text = await response.text();
       const domParser = new DOMParser();
-      let doc = domParser.parseFromString(text);
+      let doc = domParser.parseFromString(text, "text/xml");
 
       const title = doc.querySelector("channel title, feed title");
 

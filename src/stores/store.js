@@ -42,7 +42,26 @@ export const useFeedStore = defineStore("feedStore", () => {
     current.source = source;
   }
 
-  async function registerNewSource(url) {}
+  async function registerNewSource(url) {
+    try {
+      const response = await fetch();
+      let text = await response.text();
+      const domParser = new DOMParser();
+      let doc = domParser.parseFromString(text);
+
+      const title = doc.querySelector("channel title, feed title");
+
+      const source = {
+        id: crypto.randomUUID(),
+        name: title.textContent,
+        url,
+      };
+
+      sources.push(source);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return { sources, current, loadSource, registerNewSource };
 });

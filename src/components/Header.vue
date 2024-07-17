@@ -37,4 +37,9 @@ form {
   justify-content: center;
   gap: 5px;
 }
+
+.input {
+  border: none;
+  width: 400px;
+}
 </style>

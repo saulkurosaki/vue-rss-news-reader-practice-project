@@ -24,4 +24,15 @@ const handleClick = (source) => {
   grid-column-end: 2;
   background-color: #101b22;
 }
+
+.sidebar a {
+  color: #4594cd;
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: white;
+}
 </style>

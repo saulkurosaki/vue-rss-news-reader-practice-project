@@ -35,3 +35,15 @@ summary:hover {
   color: black;
 }
 </style>
+
+<style>
+img,
+figure {
+  margin: 0 auto;
+  max-width: min(100%, 500px);
+  display: block;
+}
+a {
+  color: yellowgreen;
+}
+</style>

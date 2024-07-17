@@ -41,6 +41,7 @@ form {
 .input {
   border: none;
   width: 400px;
+  padding: 10px;
 }
 
 button {

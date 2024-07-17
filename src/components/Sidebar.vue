@@ -18,4 +18,10 @@ const handleClick = (source) => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.sidebar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: #101b22;
+}
+</style>

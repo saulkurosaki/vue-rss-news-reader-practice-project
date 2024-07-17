@@ -42,4 +42,11 @@ form {
   border: none;
   width: 400px;
 }
+
+button {
+  border: none;
+  background-color: #1283a8;
+  color: white;
+  padding: 5px 10px;
+}
 </style>

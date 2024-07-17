@@ -29,4 +29,9 @@ summary {
   cursor: pointer;
   border-radius: 3px;
 }
+
+summary:hover {
+  background-color: rgb(174, 221, 255);
+  color: black;
+}
 </style>

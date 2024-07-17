@@ -12,4 +12,14 @@ import Posts from "./Posts.vue";
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.main-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  height: 100vh;
+}
+</style>

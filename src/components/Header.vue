@@ -30,4 +30,11 @@ const handleSubmit = () => {
   justify-content: center;
   padding: 10px;
 }
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
 </style>

@@ -23,4 +23,10 @@ const feedStore = useFeedStore();
   grid-column-end: 3;
   padding: 20px 80px 20px 40px;
 }
+
+summary {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
 </style>
